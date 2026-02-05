@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pools AAVE Tokens Collateral Only</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <pre>
+================================================================================
+  Pools AAVE Tokens Collateral Only | Polygon + Base
+================================================================================
+</pre>
+    <div class="dim">
+        Atualizado: <span id="lastUpdate">--</span> |
+        Próximo: <span id="countdown">--</span> |
+        <a href="#" onclick="refreshData(); return false;">[refresh]</a>
+    </div>
+    <hr>
+    <div>
+        Filtro:
+        <button class="active" data-chain="all" onclick="filterByChain('all')">[all]</button>
+        <button data-chain="polygon" onclick="filterByChain('polygon')">[polygon]</button>
+        <button data-chain="base" onclick="filterByChain('base')">[base]</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>POOL</th>
+                <th>REDE/DEX</th>
+                <th>24H%</th>
+                <th>V/L</th>
+                <th>VOL(24H)</th>
+                <th>LIQ</th>
+            </tr>
+        </thead>
+        <tbody id="tokensTableBody">
+            <tr>
+                <td colspan="6" class="dim">Buscando pools...</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script src="services/dex_service.js"></script>
+    <script src="core/relative_strength.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
